@@ -36,6 +36,6 @@ export const mutations = {
 
 export const getters = {
     filterServicios: ({ todos }) => (query) => {
-        return todos.filter(todo => todo.title.indexOf(query) > -1)
+        return todos.filter(todo => todo.title.toLowerCase().includes(query))
     }
 }
