@@ -1,10 +1,12 @@
 export const state = {
     todos: [
-        { id: 0, title: 'Electricidad', description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.', done: false },
-        { id: 1, title: 'Auxilio Mecanico', description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.', done: false },
-        { id: 2, title: 'Chofer Reemplazo', description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.', done: false },
-        { id: 3, title: 'Medico a Domicilio', description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.', done: false }
-    ]
+        { id: 0, title: 'Electricidad', description: 'Lorem Ipsum es simplemente texto.', done: false },
+        { id: 1, title: 'Auxilio Mecanico', description: 'Lorem Ipsum es simplemente texto.', done: false },
+        { id: 2, title: 'Chofer Reemplazo', description: 'Lorem Ipsum es simplemente texto.', done: false },
+        { id: 3, title: 'Medico a Domicilio', description: 'Lorem Ipsum es simplemente texto.', done: false },
+        { id: 4, title: 'Ambulancia', description: 'Lorem Ipsum es simplemente texto.', done: false },
+        { id: 5, title: 'Gasfitero', description: 'Lorem Ipsum es simplemente texto.', done: false }
+    ],
 }
 
 export const mutations = {
@@ -29,5 +31,11 @@ export const mutations = {
 
     toggleTodo(state, { todo }) {
         todo.done = !todo.done
+    }
+}
+
+export const getters = {
+    filterServicios: ({ todos }) => (query) => {
+        return todos.filter(todo => todo.title.indexOf(query) > -1)
     }
 }

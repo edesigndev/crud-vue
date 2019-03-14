@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-4 col-xs-12">
+  <div class="col-12 order-1 col-md-4 order-md-2 form-group">
     <div class="card text-left">
       <form @submit.prevent="doneAdd">
         <div class="card-header">
@@ -51,5 +51,3 @@ export default {
 };
 </script>
 
-<style>
-</style>

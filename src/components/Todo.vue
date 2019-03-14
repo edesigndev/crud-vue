@@ -1,6 +1,6 @@
 <template>
-  <div class="col-md-4">
-    <div class="card card-fijo text-left" :class="{ completed: todo.done }">
+  <div class="col-12 col-md-4">
+    <div class="card text-left" :class="{ completed: todo.done }">
       <div class="card-body">
         <h5 @dblclick="editing = true" v-show="!editing">{{ todo.title }}</h5>
         <p @dblclick="editing = true" v-show="!editing">{{ todo.description }}</p>
@@ -54,10 +54,6 @@ export default {
 </script>
 
 <style scoped>
-.card-fijo{
-    width: 223.33px;
-    height: 249px;
-}
 .noresize {
   resize: none !important;
 }
